@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
 import { Button } from 'ui/Button';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

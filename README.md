@@ -151,6 +151,7 @@ module.exports = withTM({
 ```
 
 - 这个tailwind.config.js属实有点凶
+  - postcss 真凶
   - 还好有 `jit` 加持
   - 你那边是一种，我这边是一种，大家各成方圆，🌝 🌚
 
@@ -158,12 +159,11 @@ module.exports = withTM({
 module.exports = {
   content: [
     'src/**/*.{js,ts,jsx,tsx}',
-    'ui/**/*.{js,ts,jsx,tsx}',
+    '../../packages/ui/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {},
   },
   plugins: [],
 }
-
 ```
