@@ -82,12 +82,12 @@ yarn install
 ```bash
 Tasks:    3 successful, 3 total
 Cached:    0 cached, 3 total
-  Time:    10.697s 
+  Time:    10.697s
 ✨  Done in 11.26s.
 
 Tasks:    3 successful, 3 total
 Cached:    0 cached, 3 total
-  Time:    5.671s 
+  Time:    5.671s
 ✨  Done in 6.02s.
 
 Tasks:    3 successful, 3 total
@@ -122,7 +122,7 @@ next-app:lint: $ eslint src --fix
 
  Tasks:    3 successful, 3 total
 Cached:    2 cached, 3 total
-  Time:    2.96s 
+  Time:    2.96s
 
 ✨  Done in 3.11s.
 ```
@@ -134,3 +134,36 @@ import { Button } from 'ui/Button';
 import { IBoy } from 'server/src/lib/BoyInterface';
 ```
 
+## sharing tailwindcss ui
+
+```bash
+yarn workspace next-app add -D next-transpile-modules
+
+yarn workspace ui add -D tailwindcss postcss autoprefixer
+```
+
+```js
+const withTM = require('next-transpile-modules')(['ui']);
+
+module.exports = withTM({
+  reactStrictMode: true,
+});
+```
+
+- 这个tailwind.config.js属实有点凶
+  - 还好有 `jit` 加持
+  - 你那边是一种，我这边是一种，大家各成方圆，🌝 🌚
+
+```js
+module.exports = {
+  content: [
+    'src/**/*.{js,ts,jsx,tsx}',
+    'ui/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+```

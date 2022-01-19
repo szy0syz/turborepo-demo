@@ -10,6 +10,7 @@ app.get('/', (_req, res) => {
     res.send('Hello World');
 });
 app.listen(port, () => {
+    // eslint-disable-next-line no-console
     console.log('Example app listening at http://localhost:4000');
 });
 //# sourceMappingURL=index.js.map
