@@ -1,37 +1,9 @@
-# Turborepo Demo
-
-```bash
-yarn build
-yarn build --scope=docs
-```
-
-```js
-const withTM = require("next-transpile-modules")(["ui"]);
-
-module.exports = withTM({
-  reactStrictMode: true,
-});
-```
-
-```bash
-rm -rf node_modules/ apps/web/node_modules/ apps/docs/node_modules/
-
-rm -rf apps/docs apps/web/
-
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-
-rm -rf with-tailwindcss-app/node_modules
-
-mv with-tailwindcss-app next-app && cp -r next-app next-next-app
-```
-
-```json
 {
   "name": "next-app",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 3000",
     "build": "next build",
     "start": "next start"
   },
@@ -54,6 +26,3 @@ mv with-tailwindcss-app next-app && cp -r next-app next-next-app
     "typescript": "4.5.4"
   }
 }
-```
-
-- `yarn install` 整个项目完美了
