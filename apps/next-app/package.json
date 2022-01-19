@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src --fix",
-    "test": "echo \"next-app\""
+    "test": "jest --coverage"
   },
   "dependencies": {
     "next": "latest",

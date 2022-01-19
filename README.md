@@ -237,3 +237,36 @@ Cached:    5 cached, 5 total
  mode change 100644 => 100755 apps/server/dist/src/lib/BoyInterface.js.map
  mode change 100644 => 100755 apps/server/dist/tsconfig.tsbuildinfo
 ```
+
+```bash
+yarn add -D -W jest @types/jest @testing-library/jest-dom @testing-library/react @testing-library/react-hooks @testing-library/user-event identity-obj-proxy esbuild esbuild-jest
+
+next-app:test: PASS src/lib/add.test.ts
+next-app:test: PASS src/components/HelloWorld.test.tsx
+next-app:test: -----------------|---------|----------|---------|---------|-------------------
+next-app:test: File             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+next-app:test: -----------------|---------|----------|---------|---------|-------------------
+next-app:test: All files        |   38.66 |    29.31 |   36.95 |   39.09 |                   
+next-app:test:  components      |   96.96 |    76.92 |      90 |     100 |                   
+next-app:test:   HelloWorld.tsx |   96.96 |    76.92 |      90 |     100 | 13-15,21,27       
+next-app:test:  lib             |     100 |    73.68 |     100 |     100 |                   
+next-app:test:   add.ts         |     100 |    73.68 |     100 |     100 | 11-13,22          
+next-app:test:  pages           |       0 |        0 |       0 |       0 |                   
+next-app:test:   _app.tsx       |       0 |        0 |       0 |       0 | 1-38              
+next-app:test:   index.tsx      |       0 |        0 |       0 |       0 | 1-46              
+next-app:test:  pages/api       |       0 |        0 |       0 |       0 |                   
+next-app:test:   hello.ts       |       0 |        0 |       0 |       0 | 1-30              
+next-app:test: -----------------|---------|----------|---------|---------|-------------------
+next-app:test: 
+next-app:test: Test Suites: 2 passed, 2 total
+next-app:test: Tests:       2 passed, 2 total
+next-app:test: Snapshots:   0 total
+next-app:test: Time:        2.384 s
+next-app:test: Ran all test suites.
+
+ Tasks:    5 successful, 5 total
+Cached:    1 cached, 5 total
+  Time:    3.587s 
+
+✨  Done in 3.75s.
+```
