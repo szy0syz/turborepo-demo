@@ -150,7 +150,7 @@ module.exports = withTM({
 });
 ```
 
-- 这个tailwind.config.js属实有点凶
+- 这个 tailwind.config.js 属实有点凶
   - postcss 真凶
   - 还好有 `jit` 加持
   - 你那边是一种，我这边是一种，大家各成方圆，🌝 🌚
@@ -165,9 +165,27 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};
 ```
 
 ```bash
 yarn add -D -W husky lint-staged
+
+npx husky add .husky/pre-commit "npm run test && npx lint-staged"
+```
+
+- 1.`yarn build`
+- 2.`yarn test`
+
+```bash
+Tasks:    3 successful, 3 total
+Cached:    0 cached, 3 total
+  Time:    14.999s 
+✨  Done in 15.57s.
+
+
+Tasks:    3 successful, 3 total
+Cached:    3 cached, 3 total
+  Time:    397ms >>> FULL TURBO
+✨  Done in 0.57s.
 ```
