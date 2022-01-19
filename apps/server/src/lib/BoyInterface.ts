@@ -1,4 +1,4 @@
-export interface BoyInterface {
+export interface IBoy {
   name: string;
   age: number;
 }

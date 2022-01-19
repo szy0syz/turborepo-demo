@@ -1,6 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import { Button } from 'ui/Button';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { IBoy } from 'server/src/lib/BoyInterface';
 
 const Home: React.FC = () => (
   <div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -65,6 +68,7 @@ const Home: React.FC = () => (
           </p>
         </a>
       </div>
+      <Button />
     </main>
 
     <footer className="flex items-center justify-center w-full h-24 border-t">

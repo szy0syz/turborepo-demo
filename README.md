@@ -106,3 +106,31 @@ yarn workspace server add -D eslint
 
 yarn workspace config add @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb eslint-config-airbnb-base eslint-config-airbnb-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-testing-library
 ```
+
+```bash
+$ yarn lint
+yarn run v1.22.17
+$ turbo run lint
+• Packages in scope: config, next-app, next-next-app, server, tsconfig, ui
+• Running lint in 6 packages
+next-app:lint: cache miss, executing 02d42d64e4c32c73
+next-next-app:lint: cache hit, replaying output 7446afcb1d5ae34a
+next-next-app:lint: $ eslint src --fix
+server:lint: cache hit, replaying output 460d571b37b0b466
+server:lint: $ eslint src --fix
+next-app:lint: $ eslint src --fix
+
+ Tasks:    3 successful, 3 total
+Cached:    2 cached, 3 total
+  Time:    2.96s 
+
+✨  Done in 3.11s.
+```
+
+> **终于解开了我的一个心病**
+
+```tsx
+import { Button } from 'ui/Button';
+import { IBoy } from 'server/src/lib/BoyInterface';
+```
+
