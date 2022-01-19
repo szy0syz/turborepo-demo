@@ -1,7 +1,8 @@
-import Head from 'next/head'
+import React from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
 
-export default function Home() {
-  return (
+const Home: React.FC = () => (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
         <title>Create Next App</title>
@@ -74,9 +75,10 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
+          <Image src="/vercel.svg" alt="Vercel Logo"  className="h-4 ml-2" />
         </a>
       </footer>
     </div>
-  )
-}
+  );
+
+export default Home;

@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev --port 3001",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint src --fix",
+    "test": "echo \"tests\""
   },
   "dependencies": {
     "next": "latest",
