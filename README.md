@@ -189,3 +189,49 @@ Cached:    3 cached, 3 total
   Time:    397ms >>> FULL TURBO
 ✨  Done in 0.57s.
 ```
+
+```bahs
+~/git/turborepo-demo on  main! ⌚ 15:44:53
+$ git commit -m "test: 测试husky"         
+
+> turborepo-basic-shared@0.0.0 test
+> turbo run test
+
+• Packages in scope: config, next-app, next-next-app, server, tsconfig, ui
+• Running test in 6 packages
+ui:test: cache hit, replaying output 8fae2fa6573df746
+ui:test: $ echo "tests"
+ui:test: tests
+server:test: cache hit, replaying output 88a7a86901268167
+server:test: $ echo "server-test"
+server:test: server-test
+server:build: cache hit, replaying output cd1b5ca411b24354
+server:build: $ tsc
+next-app:test: cache hit, replaying output c5908fd2c591b261
+next-app:test: $ echo "next-app"
+next-app:test: next-app
+next-next-app:test: cache hit, replaying output f6504964af82842d
+next-next-app:test: $ echo "next-next-app"
+next-next-app:test: next-next-app
+
+ Tasks:    5 successful, 5 total
+Cached:    5 cached, 5 total
+  Time:    65ms >>> FULL TURBO
+
+✔ Preparing lint-staged...
+✔ Running tasks for staged files...
+✔ Applying modifications from tasks...
+✔ Cleaning up temporary files...
+[main f2b53dd] test: 测试husky
+ 16 files changed, 51 insertions(+), 6 deletions(-)
+ create mode 100755 .husky/pre-commit
+ mode change 100644 => 100755 apps/server/dist/src/index.d.ts
+ mode change 100644 => 100755 apps/server/dist/src/index.d.ts.map
+ mode change 100644 => 100755 apps/server/dist/src/index.js
+ mode change 100644 => 100755 apps/server/dist/src/index.js.map
+ mode change 100644 => 100755 apps/server/dist/src/lib/BoyInterface.d.ts
+ mode change 100644 => 100755 apps/server/dist/src/lib/BoyInterface.d.ts.map
+ mode change 100644 => 100755 apps/server/dist/src/lib/BoyInterface.js
+ mode change 100644 => 100755 apps/server/dist/src/lib/BoyInterface.js.map
+ mode change 100644 => 100755 apps/server/dist/tsconfig.tsbuildinfo
+```
