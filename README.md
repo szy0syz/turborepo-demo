@@ -167,3 +167,7 @@ module.exports = {
   plugins: [],
 }
 ```
+
+```bash
+yarn add -D -W husky lint-staged
+```
