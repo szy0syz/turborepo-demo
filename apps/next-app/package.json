@@ -19,10 +19,10 @@
     "@types/react": "^17.0.38",
     "autoprefixer": "^10.4.0",
     "config": "*",
+    "tsconfig": "*",
     "eslint": "^8.4.1",
     "next-transpile-modules": "^9.0.0",
     "postcss": "^8.4.5",
-    "tsconfig": "*",
     "tailwindcss": "^3.0.7",
     "typescript": "^4.5.4"
   }

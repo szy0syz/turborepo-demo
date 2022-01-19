@@ -68,4 +68,30 @@ yarn workspace next-next-app add -D typescript @types/react @types/node
 - ❗❗️❗️️ 多个️项目需要集中控制配置，例如 next 的配置、ts 的配置和服务端的配置。
   - `yarn install`
   - `yarn build`
-  
+
+```bash
+mkdir apps/server
+
+yarn workspace server add -D typescript @types/node nodemon
+
+yarn install
+```
+
+- `turborepo` 涡轮增压的威力
+
+```bash
+Tasks:    3 successful, 3 total
+Cached:    0 cached, 3 total
+  Time:    10.697s 
+✨  Done in 11.26s.
+
+Tasks:    3 successful, 3 total
+Cached:    0 cached, 3 total
+  Time:    5.671s 
+✨  Done in 6.02s.
+
+Tasks:    3 successful, 3 total
+Cached:    3 cached, 3 total
+  Time:    117ms >>> FULL TURBO
+✨  Done in 0.28s.
+```
