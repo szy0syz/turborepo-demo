@@ -6,7 +6,7 @@ yarn build --scope=docs
 ```
 
 ```js
-const withTM = require("next-transpile-modules")(["ui"]);
+const withTM = require('next-transpile-modules')(['ui']);
 
 module.exports = withTM({
   reactStrictMode: true,
@@ -50,6 +50,7 @@ mv with-tailwindcss-app next-app && cp -r next-app next-next-app
     "eslint": "^8.4.1",
     "next-transpile-modules": "^9.0.0",
     "postcss": "^8.4.5",
+    "tsconfig": "*",
     "tailwindcss": "^3.0.7",
     "typescript": "4.5.4"
   }
@@ -57,3 +58,14 @@ mv with-tailwindcss-app next-app && cp -r next-app next-next-app
 ```
 
 - `yarn install` 整个项目完美了
+
+```bash
+# in project root
+yarn workspace next-app add -D typescript @types/react @types/node
+yarn workspace next-next-app add -D typescript @types/react @types/node
+```
+
+- ❗❗️❗️️ 多个️项目需要集中控制配置，例如 next 的配置、ts 的配置和服务端的配置。
+  - `yarn install`
+  - `yarn build`
+  
