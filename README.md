@@ -95,3 +95,14 @@ Cached:    3 cached, 3 total
   Time:    117ms >>> FULL TURBO
 ✨  Done in 0.28s.
 ```
+
+- ESLINT
+
+```bash
+# 单独添加依赖
+yarn workspace next-app add -D eslint
+yarn workspace next-next-app add -D eslint
+yarn workspace server add -D eslint
+
+yarn workspace config add @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb eslint-config-airbnb-base eslint-config-airbnb-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-testing-library
+```
